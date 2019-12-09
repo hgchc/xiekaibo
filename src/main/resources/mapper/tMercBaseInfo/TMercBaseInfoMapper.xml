@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rebirth.mapper.TMercBaseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.rebirth.pojo.TMercBaseInfo" >
+    <id column="MERC_ID" property="mercId" jdbcType="VARCHAR" />
+    <result column="USER_NO" property="userNo" jdbcType="VARCHAR" />
+    <result column="MERC_CHA_NAME" property="mercChaName" jdbcType="VARCHAR" />
+    <result column="MERC_CHA_NAME_SHORT" property="mercChaNameShort" jdbcType="VARCHAR" />
+    <result column="MERC_ENG_NAME" property="mercEngName" jdbcType="VARCHAR" />
+    <result column="MERC_FORM" property="mercForm" jdbcType="VARCHAR" />
+    <result column="MERC_NATURE" property="mercNature" jdbcType="VARCHAR" />
+    <result column="MERC_MCC" property="mercMcc" jdbcType="VARCHAR" />
+    <result column="MERC_BUS_RANGE" property="mercBusRange" jdbcType="VARCHAR" />
+    <result column="MERC_PROV" property="mercProv" jdbcType="VARCHAR" />
+    <result column="MERC_CITY" property="mercCity" jdbcType="VARCHAR" />
+    <result column="MERC_DISTRICT" property="mercDistrict" jdbcType="VARCHAR" />
+    <result column="MERC_REG_ADDR" property="mercRegAddr" jdbcType="VARCHAR" />
+    <result column="MERC_BUS_ADDR" property="mercBusAddr" jdbcType="VARCHAR" />
+    <result column="MERC_REGIST_PHONE" property="mercRegistPhone" jdbcType="VARCHAR" />
+    <result column="MERC_SERV_PHONE" property="mercServPhone" jdbcType="VARCHAR" />
+    <result column="SETT_TYPE" property="settType" jdbcType="VARCHAR" />
+    <result column="MERC_STATUS" property="mercStatus" jdbcType="CHAR" />
+    <result column="MERC_AUTH_STATUS" property="mercAuthStatus" jdbcType="CHAR" />
+    <result column="PARENT_MERC_ID" property="parentMercId" jdbcType="VARCHAR" />
+    <result column="PARENT_PROXY_MERC_ID" property="parentProxyMercId" jdbcType="VARCHAR" />
+    <result column="PARENT_CHANNEL_MER_ID" property="parentChannelMerId" jdbcType="VARCHAR" />
+    <result column="MERC_PATH" property="mercPath" jdbcType="VARCHAR" />
+    <result column="DIRECT_CONN_FLAG" property="directConnFlag" jdbcType="VARCHAR" />
+    <result column="WX_PAY_MERC_MCC" property="wxPayMercMcc" jdbcType="VARCHAR" />
+    <result column="ALI_PAY_MERC_MCC" property="aliPayMercMcc" jdbcType="VARCHAR" />
+    <result column="MERC_LINK_MAN_NAME" property="mercLinkManName" jdbcType="VARCHAR" />
+    <result column="MERC_LINK_MAN_PHONE" property="mercLinkManPhone" jdbcType="VARCHAR" />
+    <result column="MERC_LINK_MAN_EMAIL" property="mercLinkManEmail" jdbcType="VARCHAR" />
+    <result column="CORP_REPR" property="corpRepr" jdbcType="VARCHAR" />
+    <result column="CORP_REPR_PHONE" property="corpReprPhone" jdbcType="VARCHAR" />
+    <result column="CORP_REPR_ID_TYPE" property="corpReprIdType" jdbcType="CHAR" />
+    <result column="CORP_REPR_ID_NO" property="corpReprIdNo" jdbcType="VARCHAR" />
+    <result column="CORP_REPR_ID_VALID" property="corpReprIdValid" jdbcType="VARCHAR" />
+    <result column="CORP_REPR_ID_FRONT_PHOTO" property="corpReprIdFrontPhoto" jdbcType="VARCHAR" />
+    <result column="CORP_REPR_ID_BACK_PHOTO" property="corpReprIdBackPhoto" jdbcType="VARCHAR" />
+    <result column="CORP_REPR_ID_HAND_PHOTO" property="corpReprIdHandPhoto" jdbcType="VARCHAR" />
+    <result column="MERC_AUTH_REFUSE_REMARK" property="mercAuthRefuseRemark" jdbcType="VARCHAR" />
+    <result column="MERC_PRO_NAME" property="mercProName" jdbcType="VARCHAR" />
+    <result column="IS_SUPPORT_CRE_CARD" property="isSupportCreCard" jdbcType="CHAR" />
+    <result column="IS_SUPPORT_ALI_HB" property="isSupportAliHb" jdbcType="CHAR" />
+    <result column="CHARGE_BACK_MODE" property="chargeBackMode" jdbcType="CHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+    <result column="CREATE_OPER" property="createOper" jdbcType="VARCHAR" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="VARCHAR" />
+    <result column="UPDATE_OPER" property="updateOper" jdbcType="VARCHAR" />
+    <result column="VERIFY_OPER" property="verifyOper" jdbcType="VARCHAR" />
+    <result column="MERC_SOURCE" property="mercSource" jdbcType="CHAR" />
+    <result column="OPERATION_RECORD_NO" property="operationRecordNo" jdbcType="VARCHAR" />
+    <result column="UNION_PAY_MERC_MCC" property="unionPayMercMcc" jdbcType="VARCHAR" />
+    <result column="SPEC_DISC_TP" property="specDiscTp" jdbcType="VARCHAR" />
+    <result column="SPEC_DISC_LVL" property="specDiscLvl" jdbcType="VARCHAR" />
+    <result column="UNION_PAY_TERM_ID" property="unionPayTermId" jdbcType="VARCHAR" />
+    <result column="SPECIAL_MERC_ID" property="specialMercId" jdbcType="VARCHAR" />
+    <result column="ORIGNAL_ACCESS_WAY" property="orignalAccessWay" jdbcType="VARCHAR" />
+    <result column="ACCESS_WAY" property="accessWay" jdbcType="VARCHAR" />
+    <result column="DDD_MICROHURT" property="dddMicrohurt" jdbcType="VARCHAR" />
+    <result column="IS_MICROHURT" property="isMicrohurt" jdbcType="VARCHAR" />
+    <result column="BUND_MERC_API_FLAG" property="bundMercApiFlag" jdbcType="VARCHAR" />
+    <result column="LOWEST_PRICEAPPLY" property="lowestPriceapply" jdbcType="CHAR" />
+    <result column="REGIST_CODE" property="registCode" jdbcType="VARCHAR" />
+    <result column="LINE_FLAG" property="lineFlag" jdbcType="VARCHAR" />
+    <result column="WEBSITE" property="website" jdbcType="VARCHAR" />
+    <result column="FAX" property="fax" jdbcType="VARCHAR" />
+    <result column="POSTCODE" property="postcode" jdbcType="VARCHAR" />
+    <result column="OVERSEARS_CARD" property="oversearsCard" jdbcType="CHAR" />
+    <result column="SYS_ID" property="sysId" jdbcType="VARCHAR" />
+    <result column="OUT_MERC_ID" property="outMercId" jdbcType="VARCHAR" />
+    <result column="CHNMER_SUBJECT_ID" property="chnmerSubjectId" jdbcType="VARCHAR" />
+    <result column="MAINTAIN_ID" property="maintainId" jdbcType="VARCHAR" />
+    <result column="CHNMERC_MAINTAIN_ID" property="chnmercMaintainId" jdbcType="VARCHAR" />
+    <result column="REFUND_FLAG" property="refundFlag" jdbcType="VARCHAR" />
+    <result column="MERC_SER_TYPE" property="mercSerType" jdbcType="VARCHAR" />
+    <result column="STORE_MANA_ID_TYPE" property="storeManaIdType" jdbcType="VARCHAR" />
+    <result column="STORE_MANA_ID_NO" property="storeManaIdNo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    MERC_ID, USER_NO, MERC_CHA_NAME, MERC_CHA_NAME_SHORT, MERC_ENG_NAME, MERC_FORM, MERC_NATURE, 
+    MERC_MCC, MERC_BUS_RANGE, MERC_PROV, MERC_CITY, MERC_DISTRICT, MERC_REG_ADDR, MERC_BUS_ADDR, 
+    MERC_REGIST_PHONE, MERC_SERV_PHONE, SETT_TYPE, MERC_STATUS, MERC_AUTH_STATUS, PARENT_MERC_ID, 
+    PARENT_PROXY_MERC_ID, PARENT_CHANNEL_MER_ID, MERC_PATH, DIRECT_CONN_FLAG, WX_PAY_MERC_MCC, 
+    ALI_PAY_MERC_MCC, MERC_LINK_MAN_NAME, MERC_LINK_MAN_PHONE, MERC_LINK_MAN_EMAIL, CORP_REPR, 
+    CORP_REPR_PHONE, CORP_REPR_ID_TYPE, CORP_REPR_ID_NO, CORP_REPR_ID_VALID, CORP_REPR_ID_FRONT_PHOTO, 
+    CORP_REPR_ID_BACK_PHOTO, CORP_REPR_ID_HAND_PHOTO, MERC_AUTH_REFUSE_REMARK, MERC_PRO_NAME, 
+    IS_SUPPORT_CRE_CARD, IS_SUPPORT_ALI_HB, CHARGE_BACK_MODE, REMARK, CREATE_TIME, CREATE_OPER, 
+    UPDATE_TIME, UPDATE_OPER, VERIFY_OPER, MERC_SOURCE, OPERATION_RECORD_NO, UNION_PAY_MERC_MCC, 
+    SPEC_DISC_TP, SPEC_DISC_LVL, UNION_PAY_TERM_ID, SPECIAL_MERC_ID, ORIGNAL_ACCESS_WAY, 
+    ACCESS_WAY, DDD_MICROHURT, IS_MICROHURT, BUND_MERC_API_FLAG, LOWEST_PRICEAPPLY, REGIST_CODE, 
+    LINE_FLAG, WEBSITE, FAX, POSTCODE, OVERSEARS_CARD, SYS_ID, OUT_MERC_ID, CHNMER_SUBJECT_ID, 
+    MAINTAIN_ID, CHNMERC_MAINTAIN_ID, REFUND_FLAG, MERC_SER_TYPE, STORE_MANA_ID_TYPE, 
+    STORE_MANA_ID_NO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_merc_base_info
+    where MERC_ID = #{mercId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_merc_base_info
+    where MERC_ID = #{mercId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.rebirth.pojo.TMercBaseInfo" >
+    insert into t_merc_base_info (MERC_ID, USER_NO, MERC_CHA_NAME, 
+      MERC_CHA_NAME_SHORT, MERC_ENG_NAME, MERC_FORM, 
+      MERC_NATURE, MERC_MCC, MERC_BUS_RANGE, 
+      MERC_PROV, MERC_CITY, MERC_DISTRICT, 
+      MERC_REG_ADDR, MERC_BUS_ADDR, MERC_REGIST_PHONE, 
+      MERC_SERV_PHONE, SETT_TYPE, MERC_STATUS, 
+      MERC_AUTH_STATUS, PARENT_MERC_ID, PARENT_PROXY_MERC_ID, 
+      PARENT_CHANNEL_MER_ID, MERC_PATH, DIRECT_CONN_FLAG, 
+      WX_PAY_MERC_MCC, ALI_PAY_MERC_MCC, MERC_LINK_MAN_NAME, 
+      MERC_LINK_MAN_PHONE, MERC_LINK_MAN_EMAIL, CORP_REPR, 
+      CORP_REPR_PHONE, CORP_REPR_ID_TYPE, CORP_REPR_ID_NO, 
+      CORP_REPR_ID_VALID, CORP_REPR_ID_FRONT_PHOTO, 
+      CORP_REPR_ID_BACK_PHOTO, CORP_REPR_ID_HAND_PHOTO, 
+      MERC_AUTH_REFUSE_REMARK, MERC_PRO_NAME, IS_SUPPORT_CRE_CARD, 
+      IS_SUPPORT_ALI_HB, CHARGE_BACK_MODE, REMARK, 
+      CREATE_TIME, CREATE_OPER, UPDATE_TIME, 
+      UPDATE_OPER, VERIFY_OPER, MERC_SOURCE, 
+      OPERATION_RECORD_NO, UNION_PAY_MERC_MCC, SPEC_DISC_TP, 
+      SPEC_DISC_LVL, UNION_PAY_TERM_ID, SPECIAL_MERC_ID, 
+      ORIGNAL_ACCESS_WAY, ACCESS_WAY, DDD_MICROHURT, 
+      IS_MICROHURT, BUND_MERC_API_FLAG, LOWEST_PRICEAPPLY, 
+      REGIST_CODE, LINE_FLAG, WEBSITE, 
+      FAX, POSTCODE, OVERSEARS_CARD, 
+      SYS_ID, OUT_MERC_ID, CHNMER_SUBJECT_ID, 
+      MAINTAIN_ID, CHNMERC_MAINTAIN_ID, REFUND_FLAG, 
+      MERC_SER_TYPE, STORE_MANA_ID_TYPE, STORE_MANA_ID_NO
+      )
+    values (#{mercId,jdbcType=VARCHAR}, #{userNo,jdbcType=VARCHAR}, #{mercChaName,jdbcType=VARCHAR}, 
+      #{mercChaNameShort,jdbcType=VARCHAR}, #{mercEngName,jdbcType=VARCHAR}, #{mercForm,jdbcType=VARCHAR}, 
+      #{mercNature,jdbcType=VARCHAR}, #{mercMcc,jdbcType=VARCHAR}, #{mercBusRange,jdbcType=VARCHAR}, 
+      #{mercProv,jdbcType=VARCHAR}, #{mercCity,jdbcType=VARCHAR}, #{mercDistrict,jdbcType=VARCHAR}, 
+      #{mercRegAddr,jdbcType=VARCHAR}, #{mercBusAddr,jdbcType=VARCHAR}, #{mercRegistPhone,jdbcType=VARCHAR}, 
+      #{mercServPhone,jdbcType=VARCHAR}, #{settType,jdbcType=VARCHAR}, #{mercStatus,jdbcType=CHAR}, 
+      #{mercAuthStatus,jdbcType=CHAR}, #{parentMercId,jdbcType=VARCHAR}, #{parentProxyMercId,jdbcType=VARCHAR}, 
+      #{parentChannelMerId,jdbcType=VARCHAR}, #{mercPath,jdbcType=VARCHAR}, #{directConnFlag,jdbcType=VARCHAR}, 
+      #{wxPayMercMcc,jdbcType=VARCHAR}, #{aliPayMercMcc,jdbcType=VARCHAR}, #{mercLinkManName,jdbcType=VARCHAR}, 
+      #{mercLinkManPhone,jdbcType=VARCHAR}, #{mercLinkManEmail,jdbcType=VARCHAR}, #{corpRepr,jdbcType=VARCHAR}, 
+      #{corpReprPhone,jdbcType=VARCHAR}, #{corpReprIdType,jdbcType=CHAR}, #{corpReprIdNo,jdbcType=VARCHAR}, 
+      #{corpReprIdValid,jdbcType=VARCHAR}, #{corpReprIdFrontPhoto,jdbcType=VARCHAR}, 
+      #{corpReprIdBackPhoto,jdbcType=VARCHAR}, #{corpReprIdHandPhoto,jdbcType=VARCHAR}, 
+      #{mercAuthRefuseRemark,jdbcType=VARCHAR}, #{mercProName,jdbcType=VARCHAR}, #{isSupportCreCard,jdbcType=CHAR}, 
+      #{isSupportAliHb,jdbcType=CHAR}, #{chargeBackMode,jdbcType=CHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=VARCHAR}, #{createOper,jdbcType=VARCHAR}, #{updateTime,jdbcType=VARCHAR}, 
+      #{updateOper,jdbcType=VARCHAR}, #{verifyOper,jdbcType=VARCHAR}, #{mercSource,jdbcType=CHAR}, 
+      #{operationRecordNo,jdbcType=VARCHAR}, #{unionPayMercMcc,jdbcType=VARCHAR}, #{specDiscTp,jdbcType=VARCHAR}, 
+      #{specDiscLvl,jdbcType=VARCHAR}, #{unionPayTermId,jdbcType=VARCHAR}, #{specialMercId,jdbcType=VARCHAR}, 
+      #{orignalAccessWay,jdbcType=VARCHAR}, #{accessWay,jdbcType=VARCHAR}, #{dddMicrohurt,jdbcType=VARCHAR}, 
+      #{isMicrohurt,jdbcType=VARCHAR}, #{bundMercApiFlag,jdbcType=VARCHAR}, #{lowestPriceapply,jdbcType=CHAR}, 
+      #{registCode,jdbcType=VARCHAR}, #{lineFlag,jdbcType=VARCHAR}, #{website,jdbcType=VARCHAR}, 
+      #{fax,jdbcType=VARCHAR}, #{postcode,jdbcType=VARCHAR}, #{oversearsCard,jdbcType=CHAR}, 
+      #{sysId,jdbcType=VARCHAR}, #{outMercId,jdbcType=VARCHAR}, #{chnmerSubjectId,jdbcType=VARCHAR}, 
+      #{maintainId,jdbcType=VARCHAR}, #{chnmercMaintainId,jdbcType=VARCHAR}, #{refundFlag,jdbcType=VARCHAR}, 
+      #{mercSerType,jdbcType=VARCHAR}, #{storeManaIdType,jdbcType=VARCHAR}, #{storeManaIdNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.rebirth.pojo.TMercBaseInfo" >
+    insert into t_merc_base_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mercId != null" >
+        MERC_ID,
+      </if>
+      <if test="userNo != null" >
+        USER_NO,
+      </if>
+      <if test="mercChaName != null" >
+        MERC_CHA_NAME,
+      </if>
+      <if test="mercChaNameShort != null" >
+        MERC_CHA_NAME_SHORT,
+      </if>
+      <if test="mercEngName != null" >
+        MERC_ENG_NAME,
+      </if>
+      <if test="mercForm != null" >
+        MERC_FORM,
+      </if>
+      <if test="mercNature != null" >
+        MERC_NATURE,
+      </if>
+      <if test="mercMcc != null" >
+        MERC_MCC,
+      </if>
+      <if test="mercBusRange != null" >
+        MERC_BUS_RANGE,
+      </if>
+      <if test="mercProv != null" >
+        MERC_PROV,
+      </if>
+      <if test="mercCity != null" >
+        MERC_CITY,
+      </if>
+      <if test="mercDistrict != null" >
+        MERC_DISTRICT,
+      </if>
+      <if test="mercRegAddr != null" >
+        MERC_REG_ADDR,
+      </if>
+      <if test="mercBusAddr != null" >
+        MERC_BUS_ADDR,
+      </if>
+      <if test="mercRegistPhone != null" >
+        MERC_REGIST_PHONE,
+      </if>
+      <if test="mercServPhone != null" >
+        MERC_SERV_PHONE,
+      </if>
+      <if test="settType != null" >
+        SETT_TYPE,
+      </if>
+      <if test="mercStatus != null" >
+        MERC_STATUS,
+      </if>
+      <if test="mercAuthStatus != null" >
+        MERC_AUTH_STATUS,
+      </if>
+      <if test="parentMercId != null" >
+        PARENT_MERC_ID,
+      </if>
+      <if test="parentProxyMercId != null" >
+        PARENT_PROXY_MERC_ID,
+      </if>
+      <if test="parentChannelMerId != null" >
+        PARENT_CHANNEL_MER_ID,
+      </if>
+      <if test="mercPath != null" >
+        MERC_PATH,
+      </if>
+      <if test="directConnFlag != null" >
+        DIRECT_CONN_FLAG,
+      </if>
+      <if test="wxPayMercMcc != null" >
+        WX_PAY_MERC_MCC,
+      </if>
+      <if test="aliPayMercMcc != null" >
+        ALI_PAY_MERC_MCC,
+      </if>
+      <if test="mercLinkManName != null" >
+        MERC_LINK_MAN_NAME,
+      </if>
+      <if test="mercLinkManPhone != null" >
+        MERC_LINK_MAN_PHONE,
+      </if>
+      <if test="mercLinkManEmail != null" >
+        MERC_LINK_MAN_EMAIL,
+      </if>
+      <if test="corpRepr != null" >
+        CORP_REPR,
+      </if>
+      <if test="corpReprPhone != null" >
+        CORP_REPR_PHONE,
+      </if>
+      <if test="corpReprIdType != null" >
+        CORP_REPR_ID_TYPE,
+      </if>
+      <if test="corpReprIdNo != null" >
+        CORP_REPR_ID_NO,
+      </if>
+      <if test="corpReprIdValid != null" >
+        CORP_REPR_ID_VALID,
+      </if>
+      <if test="corpReprIdFrontPhoto != null" >
+        CORP_REPR_ID_FRONT_PHOTO,
+      </if>
+      <if test="corpReprIdBackPhoto != null" >
+        CORP_REPR_ID_BACK_PHOTO,
+      </if>
+      <if test="corpReprIdHandPhoto != null" >
+        CORP_REPR_ID_HAND_PHOTO,
+      </if>
+      <if test="mercAuthRefuseRemark != null" >
+        MERC_AUTH_REFUSE_REMARK,
+      </if>
+      <if test="mercProName != null" >
+        MERC_PRO_NAME,
+      </if>
+      <if test="isSupportCreCard != null" >
+        IS_SUPPORT_CRE_CARD,
+      </if>
+      <if test="isSupportAliHb != null" >
+        IS_SUPPORT_ALI_HB,
+      </if>
+      <if test="chargeBackMode != null" >
+        CHARGE_BACK_MODE,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME,
+      </if>
+      <if test="createOper != null" >
+        CREATE_OPER,
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME,
+      </if>
+      <if test="updateOper != null" >
+        UPDATE_OPER,
+      </if>
+      <if test="verifyOper != null" >
+        VERIFY_OPER,
+      </if>
+      <if test="mercSource != null" >
+        MERC_SOURCE,
+      </if>
+      <if test="operationRecordNo != null" >
+        OPERATION_RECORD_NO,
+      </if>
+      <if test="unionPayMercMcc != null" >
+        UNION_PAY_MERC_MCC,
+      </if>
+      <if test="specDiscTp != null" >
+        SPEC_DISC_TP,
+      </if>
+      <if test="specDiscLvl != null" >
+        SPEC_DISC_LVL,
+      </if>
+      <if test="unionPayTermId != null" >
+        UNION_PAY_TERM_ID,
+      </if>
+      <if test="specialMercId != null" >
+        SPECIAL_MERC_ID,
+      </if>
+      <if test="orignalAccessWay != null" >
+        ORIGNAL_ACCESS_WAY,
+      </if>
+      <if test="accessWay != null" >
+        ACCESS_WAY,
+      </if>
+      <if test="dddMicrohurt != null" >
+        DDD_MICROHURT,
+      </if>
+      <if test="isMicrohurt != null" >
+        IS_MICROHURT,
+      </if>
+      <if test="bundMercApiFlag != null" >
+        BUND_MERC_API_FLAG,
+      </if>
+      <if test="lowestPriceapply != null" >
+        LOWEST_PRICEAPPLY,
+      </if>
+      <if test="registCode != null" >
+        REGIST_CODE,
+      </if>
+      <if test="lineFlag != null" >
+        LINE_FLAG,
+      </if>
+      <if test="website != null" >
+        WEBSITE,
+      </if>
+      <if test="fax != null" >
+        FAX,
+      </if>
+      <if test="postcode != null" >
+        POSTCODE,
+      </if>
+      <if test="oversearsCard != null" >
+        OVERSEARS_CARD,
+      </if>
+      <if test="sysId != null" >
+        SYS_ID,
+      </if>
+      <if test="outMercId != null" >
+        OUT_MERC_ID,
+      </if>
+      <if test="chnmerSubjectId != null" >
+        CHNMER_SUBJECT_ID,
+      </if>
+      <if test="maintainId != null" >
+        MAINTAIN_ID,
+      </if>
+      <if test="chnmercMaintainId != null" >
+        CHNMERC_MAINTAIN_ID,
+      </if>
+      <if test="refundFlag != null" >
+        REFUND_FLAG,
+      </if>
+      <if test="mercSerType != null" >
+        MERC_SER_TYPE,
+      </if>
+      <if test="storeManaIdType != null" >
+        STORE_MANA_ID_TYPE,
+      </if>
+      <if test="storeManaIdNo != null" >
+        STORE_MANA_ID_NO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mercId != null" >
+        #{mercId,jdbcType=VARCHAR},
+      </if>
+      <if test="userNo != null" >
+        #{userNo,jdbcType=VARCHAR},
+      </if>
+      <if test="mercChaName != null" >
+        #{mercChaName,jdbcType=VARCHAR},
+      </if>
+      <if test="mercChaNameShort != null" >
+        #{mercChaNameShort,jdbcType=VARCHAR},
+      </if>
+      <if test="mercEngName != null" >
+        #{mercEngName,jdbcType=VARCHAR},
+      </if>
+      <if test="mercForm != null" >
+        #{mercForm,jdbcType=VARCHAR},
+      </if>
+      <if test="mercNature != null" >
+        #{mercNature,jdbcType=VARCHAR},
+      </if>
+      <if test="mercMcc != null" >
+        #{mercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="mercBusRange != null" >
+        #{mercBusRange,jdbcType=VARCHAR},
+      </if>
+      <if test="mercProv != null" >
+        #{mercProv,jdbcType=VARCHAR},
+      </if>
+      <if test="mercCity != null" >
+        #{mercCity,jdbcType=VARCHAR},
+      </if>
+      <if test="mercDistrict != null" >
+        #{mercDistrict,jdbcType=VARCHAR},
+      </if>
+      <if test="mercRegAddr != null" >
+        #{mercRegAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="mercBusAddr != null" >
+        #{mercBusAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="mercRegistPhone != null" >
+        #{mercRegistPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="mercServPhone != null" >
+        #{mercServPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="settType != null" >
+        #{settType,jdbcType=VARCHAR},
+      </if>
+      <if test="mercStatus != null" >
+        #{mercStatus,jdbcType=CHAR},
+      </if>
+      <if test="mercAuthStatus != null" >
+        #{mercAuthStatus,jdbcType=CHAR},
+      </if>
+      <if test="parentMercId != null" >
+        #{parentMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentProxyMercId != null" >
+        #{parentProxyMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentChannelMerId != null" >
+        #{parentChannelMerId,jdbcType=VARCHAR},
+      </if>
+      <if test="mercPath != null" >
+        #{mercPath,jdbcType=VARCHAR},
+      </if>
+      <if test="directConnFlag != null" >
+        #{directConnFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="wxPayMercMcc != null" >
+        #{wxPayMercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="aliPayMercMcc != null" >
+        #{aliPayMercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="mercLinkManName != null" >
+        #{mercLinkManName,jdbcType=VARCHAR},
+      </if>
+      <if test="mercLinkManPhone != null" >
+        #{mercLinkManPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="mercLinkManEmail != null" >
+        #{mercLinkManEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="corpRepr != null" >
+        #{corpRepr,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprPhone != null" >
+        #{corpReprPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdType != null" >
+        #{corpReprIdType,jdbcType=CHAR},
+      </if>
+      <if test="corpReprIdNo != null" >
+        #{corpReprIdNo,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdValid != null" >
+        #{corpReprIdValid,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdFrontPhoto != null" >
+        #{corpReprIdFrontPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdBackPhoto != null" >
+        #{corpReprIdBackPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdHandPhoto != null" >
+        #{corpReprIdHandPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="mercAuthRefuseRemark != null" >
+        #{mercAuthRefuseRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="mercProName != null" >
+        #{mercProName,jdbcType=VARCHAR},
+      </if>
+      <if test="isSupportCreCard != null" >
+        #{isSupportCreCard,jdbcType=CHAR},
+      </if>
+      <if test="isSupportAliHb != null" >
+        #{isSupportAliHb,jdbcType=CHAR},
+      </if>
+      <if test="chargeBackMode != null" >
+        #{chargeBackMode,jdbcType=CHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="createOper != null" >
+        #{createOper,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOper != null" >
+        #{updateOper,jdbcType=VARCHAR},
+      </if>
+      <if test="verifyOper != null" >
+        #{verifyOper,jdbcType=VARCHAR},
+      </if>
+      <if test="mercSource != null" >
+        #{mercSource,jdbcType=CHAR},
+      </if>
+      <if test="operationRecordNo != null" >
+        #{operationRecordNo,jdbcType=VARCHAR},
+      </if>
+      <if test="unionPayMercMcc != null" >
+        #{unionPayMercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="specDiscTp != null" >
+        #{specDiscTp,jdbcType=VARCHAR},
+      </if>
+      <if test="specDiscLvl != null" >
+        #{specDiscLvl,jdbcType=VARCHAR},
+      </if>
+      <if test="unionPayTermId != null" >
+        #{unionPayTermId,jdbcType=VARCHAR},
+      </if>
+      <if test="specialMercId != null" >
+        #{specialMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="orignalAccessWay != null" >
+        #{orignalAccessWay,jdbcType=VARCHAR},
+      </if>
+      <if test="accessWay != null" >
+        #{accessWay,jdbcType=VARCHAR},
+      </if>
+      <if test="dddMicrohurt != null" >
+        #{dddMicrohurt,jdbcType=VARCHAR},
+      </if>
+      <if test="isMicrohurt != null" >
+        #{isMicrohurt,jdbcType=VARCHAR},
+      </if>
+      <if test="bundMercApiFlag != null" >
+        #{bundMercApiFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lowestPriceapply != null" >
+        #{lowestPriceapply,jdbcType=CHAR},
+      </if>
+      <if test="registCode != null" >
+        #{registCode,jdbcType=VARCHAR},
+      </if>
+      <if test="lineFlag != null" >
+        #{lineFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="website != null" >
+        #{website,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="oversearsCard != null" >
+        #{oversearsCard,jdbcType=CHAR},
+      </if>
+      <if test="sysId != null" >
+        #{sysId,jdbcType=VARCHAR},
+      </if>
+      <if test="outMercId != null" >
+        #{outMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="chnmerSubjectId != null" >
+        #{chnmerSubjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="maintainId != null" >
+        #{maintainId,jdbcType=VARCHAR},
+      </if>
+      <if test="chnmercMaintainId != null" >
+        #{chnmercMaintainId,jdbcType=VARCHAR},
+      </if>
+      <if test="refundFlag != null" >
+        #{refundFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="mercSerType != null" >
+        #{mercSerType,jdbcType=VARCHAR},
+      </if>
+      <if test="storeManaIdType != null" >
+        #{storeManaIdType,jdbcType=VARCHAR},
+      </if>
+      <if test="storeManaIdNo != null" >
+        #{storeManaIdNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.rebirth.pojo.TMercBaseInfo" >
+    update t_merc_base_info
+    <set >
+      <if test="userNo != null" >
+        USER_NO = #{userNo,jdbcType=VARCHAR},
+      </if>
+      <if test="mercChaName != null" >
+        MERC_CHA_NAME = #{mercChaName,jdbcType=VARCHAR},
+      </if>
+      <if test="mercChaNameShort != null" >
+        MERC_CHA_NAME_SHORT = #{mercChaNameShort,jdbcType=VARCHAR},
+      </if>
+      <if test="mercEngName != null" >
+        MERC_ENG_NAME = #{mercEngName,jdbcType=VARCHAR},
+      </if>
+      <if test="mercForm != null" >
+        MERC_FORM = #{mercForm,jdbcType=VARCHAR},
+      </if>
+      <if test="mercNature != null" >
+        MERC_NATURE = #{mercNature,jdbcType=VARCHAR},
+      </if>
+      <if test="mercMcc != null" >
+        MERC_MCC = #{mercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="mercBusRange != null" >
+        MERC_BUS_RANGE = #{mercBusRange,jdbcType=VARCHAR},
+      </if>
+      <if test="mercProv != null" >
+        MERC_PROV = #{mercProv,jdbcType=VARCHAR},
+      </if>
+      <if test="mercCity != null" >
+        MERC_CITY = #{mercCity,jdbcType=VARCHAR},
+      </if>
+      <if test="mercDistrict != null" >
+        MERC_DISTRICT = #{mercDistrict,jdbcType=VARCHAR},
+      </if>
+      <if test="mercRegAddr != null" >
+        MERC_REG_ADDR = #{mercRegAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="mercBusAddr != null" >
+        MERC_BUS_ADDR = #{mercBusAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="mercRegistPhone != null" >
+        MERC_REGIST_PHONE = #{mercRegistPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="mercServPhone != null" >
+        MERC_SERV_PHONE = #{mercServPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="settType != null" >
+        SETT_TYPE = #{settType,jdbcType=VARCHAR},
+      </if>
+      <if test="mercStatus != null" >
+        MERC_STATUS = #{mercStatus,jdbcType=CHAR},
+      </if>
+      <if test="mercAuthStatus != null" >
+        MERC_AUTH_STATUS = #{mercAuthStatus,jdbcType=CHAR},
+      </if>
+      <if test="parentMercId != null" >
+        PARENT_MERC_ID = #{parentMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentProxyMercId != null" >
+        PARENT_PROXY_MERC_ID = #{parentProxyMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentChannelMerId != null" >
+        PARENT_CHANNEL_MER_ID = #{parentChannelMerId,jdbcType=VARCHAR},
+      </if>
+      <if test="mercPath != null" >
+        MERC_PATH = #{mercPath,jdbcType=VARCHAR},
+      </if>
+      <if test="directConnFlag != null" >
+        DIRECT_CONN_FLAG = #{directConnFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="wxPayMercMcc != null" >
+        WX_PAY_MERC_MCC = #{wxPayMercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="aliPayMercMcc != null" >
+        ALI_PAY_MERC_MCC = #{aliPayMercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="mercLinkManName != null" >
+        MERC_LINK_MAN_NAME = #{mercLinkManName,jdbcType=VARCHAR},
+      </if>
+      <if test="mercLinkManPhone != null" >
+        MERC_LINK_MAN_PHONE = #{mercLinkManPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="mercLinkManEmail != null" >
+        MERC_LINK_MAN_EMAIL = #{mercLinkManEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="corpRepr != null" >
+        CORP_REPR = #{corpRepr,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprPhone != null" >
+        CORP_REPR_PHONE = #{corpReprPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdType != null" >
+        CORP_REPR_ID_TYPE = #{corpReprIdType,jdbcType=CHAR},
+      </if>
+      <if test="corpReprIdNo != null" >
+        CORP_REPR_ID_NO = #{corpReprIdNo,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdValid != null" >
+        CORP_REPR_ID_VALID = #{corpReprIdValid,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdFrontPhoto != null" >
+        CORP_REPR_ID_FRONT_PHOTO = #{corpReprIdFrontPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdBackPhoto != null" >
+        CORP_REPR_ID_BACK_PHOTO = #{corpReprIdBackPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="corpReprIdHandPhoto != null" >
+        CORP_REPR_ID_HAND_PHOTO = #{corpReprIdHandPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="mercAuthRefuseRemark != null" >
+        MERC_AUTH_REFUSE_REMARK = #{mercAuthRefuseRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="mercProName != null" >
+        MERC_PRO_NAME = #{mercProName,jdbcType=VARCHAR},
+      </if>
+      <if test="isSupportCreCard != null" >
+        IS_SUPPORT_CRE_CARD = #{isSupportCreCard,jdbcType=CHAR},
+      </if>
+      <if test="isSupportAliHb != null" >
+        IS_SUPPORT_ALI_HB = #{isSupportAliHb,jdbcType=CHAR},
+      </if>
+      <if test="chargeBackMode != null" >
+        CHARGE_BACK_MODE = #{chargeBackMode,jdbcType=CHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="createOper != null" >
+        CREATE_OPER = #{createOper,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME = #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOper != null" >
+        UPDATE_OPER = #{updateOper,jdbcType=VARCHAR},
+      </if>
+      <if test="verifyOper != null" >
+        VERIFY_OPER = #{verifyOper,jdbcType=VARCHAR},
+      </if>
+      <if test="mercSource != null" >
+        MERC_SOURCE = #{mercSource,jdbcType=CHAR},
+      </if>
+      <if test="operationRecordNo != null" >
+        OPERATION_RECORD_NO = #{operationRecordNo,jdbcType=VARCHAR},
+      </if>
+      <if test="unionPayMercMcc != null" >
+        UNION_PAY_MERC_MCC = #{unionPayMercMcc,jdbcType=VARCHAR},
+      </if>
+      <if test="specDiscTp != null" >
+        SPEC_DISC_TP = #{specDiscTp,jdbcType=VARCHAR},
+      </if>
+      <if test="specDiscLvl != null" >
+        SPEC_DISC_LVL = #{specDiscLvl,jdbcType=VARCHAR},
+      </if>
+      <if test="unionPayTermId != null" >
+        UNION_PAY_TERM_ID = #{unionPayTermId,jdbcType=VARCHAR},
+      </if>
+      <if test="specialMercId != null" >
+        SPECIAL_MERC_ID = #{specialMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="orignalAccessWay != null" >
+        ORIGNAL_ACCESS_WAY = #{orignalAccessWay,jdbcType=VARCHAR},
+      </if>
+      <if test="accessWay != null" >
+        ACCESS_WAY = #{accessWay,jdbcType=VARCHAR},
+      </if>
+      <if test="dddMicrohurt != null" >
+        DDD_MICROHURT = #{dddMicrohurt,jdbcType=VARCHAR},
+      </if>
+      <if test="isMicrohurt != null" >
+        IS_MICROHURT = #{isMicrohurt,jdbcType=VARCHAR},
+      </if>
+      <if test="bundMercApiFlag != null" >
+        BUND_MERC_API_FLAG = #{bundMercApiFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lowestPriceapply != null" >
+        LOWEST_PRICEAPPLY = #{lowestPriceapply,jdbcType=CHAR},
+      </if>
+      <if test="registCode != null" >
+        REGIST_CODE = #{registCode,jdbcType=VARCHAR},
+      </if>
+      <if test="lineFlag != null" >
+        LINE_FLAG = #{lineFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="website != null" >
+        WEBSITE = #{website,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        FAX = #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        POSTCODE = #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="oversearsCard != null" >
+        OVERSEARS_CARD = #{oversearsCard,jdbcType=CHAR},
+      </if>
+      <if test="sysId != null" >
+        SYS_ID = #{sysId,jdbcType=VARCHAR},
+      </if>
+      <if test="outMercId != null" >
+        OUT_MERC_ID = #{outMercId,jdbcType=VARCHAR},
+      </if>
+      <if test="chnmerSubjectId != null" >
+        CHNMER_SUBJECT_ID = #{chnmerSubjectId,jdbcType=VARCHAR},
+      </if>
+      <if test="maintainId != null" >
+        MAINTAIN_ID = #{maintainId,jdbcType=VARCHAR},
+      </if>
+      <if test="chnmercMaintainId != null" >
+        CHNMERC_MAINTAIN_ID = #{chnmercMaintainId,jdbcType=VARCHAR},
+      </if>
+      <if test="refundFlag != null" >
+        REFUND_FLAG = #{refundFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="mercSerType != null" >
+        MERC_SER_TYPE = #{mercSerType,jdbcType=VARCHAR},
+      </if>
+      <if test="storeManaIdType != null" >
+        STORE_MANA_ID_TYPE = #{storeManaIdType,jdbcType=VARCHAR},
+      </if>
+      <if test="storeManaIdNo != null" >
+        STORE_MANA_ID_NO = #{storeManaIdNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where MERC_ID = #{mercId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.rebirth.pojo.TMercBaseInfo" >
+    update t_merc_base_info
+    set USER_NO = #{userNo,jdbcType=VARCHAR},
+      MERC_CHA_NAME = #{mercChaName,jdbcType=VARCHAR},
+      MERC_CHA_NAME_SHORT = #{mercChaNameShort,jdbcType=VARCHAR},
+      MERC_ENG_NAME = #{mercEngName,jdbcType=VARCHAR},
+      MERC_FORM = #{mercForm,jdbcType=VARCHAR},
+      MERC_NATURE = #{mercNature,jdbcType=VARCHAR},
+      MERC_MCC = #{mercMcc,jdbcType=VARCHAR},
+      MERC_BUS_RANGE = #{mercBusRange,jdbcType=VARCHAR},
+      MERC_PROV = #{mercProv,jdbcType=VARCHAR},
+      MERC_CITY = #{mercCity,jdbcType=VARCHAR},
+      MERC_DISTRICT = #{mercDistrict,jdbcType=VARCHAR},
+      MERC_REG_ADDR = #{mercRegAddr,jdbcType=VARCHAR},
+      MERC_BUS_ADDR = #{mercBusAddr,jdbcType=VARCHAR},
+      MERC_REGIST_PHONE = #{mercRegistPhone,jdbcType=VARCHAR},
+      MERC_SERV_PHONE = #{mercServPhone,jdbcType=VARCHAR},
+      SETT_TYPE = #{settType,jdbcType=VARCHAR},
+      MERC_STATUS = #{mercStatus,jdbcType=CHAR},
+      MERC_AUTH_STATUS = #{mercAuthStatus,jdbcType=CHAR},
+      PARENT_MERC_ID = #{parentMercId,jdbcType=VARCHAR},
+      PARENT_PROXY_MERC_ID = #{parentProxyMercId,jdbcType=VARCHAR},
+      PARENT_CHANNEL_MER_ID = #{parentChannelMerId,jdbcType=VARCHAR},
+      MERC_PATH = #{mercPath,jdbcType=VARCHAR},
+      DIRECT_CONN_FLAG = #{directConnFlag,jdbcType=VARCHAR},
+      WX_PAY_MERC_MCC = #{wxPayMercMcc,jdbcType=VARCHAR},
+      ALI_PAY_MERC_MCC = #{aliPayMercMcc,jdbcType=VARCHAR},
+      MERC_LINK_MAN_NAME = #{mercLinkManName,jdbcType=VARCHAR},
+      MERC_LINK_MAN_PHONE = #{mercLinkManPhone,jdbcType=VARCHAR},
+      MERC_LINK_MAN_EMAIL = #{mercLinkManEmail,jdbcType=VARCHAR},
+      CORP_REPR = #{corpRepr,jdbcType=VARCHAR},
+      CORP_REPR_PHONE = #{corpReprPhone,jdbcType=VARCHAR},
+      CORP_REPR_ID_TYPE = #{corpReprIdType,jdbcType=CHAR},
+      CORP_REPR_ID_NO = #{corpReprIdNo,jdbcType=VARCHAR},
+      CORP_REPR_ID_VALID = #{corpReprIdValid,jdbcType=VARCHAR},
+      CORP_REPR_ID_FRONT_PHOTO = #{corpReprIdFrontPhoto,jdbcType=VARCHAR},
+      CORP_REPR_ID_BACK_PHOTO = #{corpReprIdBackPhoto,jdbcType=VARCHAR},
+      CORP_REPR_ID_HAND_PHOTO = #{corpReprIdHandPhoto,jdbcType=VARCHAR},
+      MERC_AUTH_REFUSE_REMARK = #{mercAuthRefuseRemark,jdbcType=VARCHAR},
+      MERC_PRO_NAME = #{mercProName,jdbcType=VARCHAR},
+      IS_SUPPORT_CRE_CARD = #{isSupportCreCard,jdbcType=CHAR},
+      IS_SUPPORT_ALI_HB = #{isSupportAliHb,jdbcType=CHAR},
+      CHARGE_BACK_MODE = #{chargeBackMode,jdbcType=CHAR},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=VARCHAR},
+      CREATE_OPER = #{createOper,jdbcType=VARCHAR},
+      UPDATE_TIME = #{updateTime,jdbcType=VARCHAR},
+      UPDATE_OPER = #{updateOper,jdbcType=VARCHAR},
+      VERIFY_OPER = #{verifyOper,jdbcType=VARCHAR},
+      MERC_SOURCE = #{mercSource,jdbcType=CHAR},
+      OPERATION_RECORD_NO = #{operationRecordNo,jdbcType=VARCHAR},
+      UNION_PAY_MERC_MCC = #{unionPayMercMcc,jdbcType=VARCHAR},
+      SPEC_DISC_TP = #{specDiscTp,jdbcType=VARCHAR},
+      SPEC_DISC_LVL = #{specDiscLvl,jdbcType=VARCHAR},
+      UNION_PAY_TERM_ID = #{unionPayTermId,jdbcType=VARCHAR},
+      SPECIAL_MERC_ID = #{specialMercId,jdbcType=VARCHAR},
+      ORIGNAL_ACCESS_WAY = #{orignalAccessWay,jdbcType=VARCHAR},
+      ACCESS_WAY = #{accessWay,jdbcType=VARCHAR},
+      DDD_MICROHURT = #{dddMicrohurt,jdbcType=VARCHAR},
+      IS_MICROHURT = #{isMicrohurt,jdbcType=VARCHAR},
+      BUND_MERC_API_FLAG = #{bundMercApiFlag,jdbcType=VARCHAR},
+      LOWEST_PRICEAPPLY = #{lowestPriceapply,jdbcType=CHAR},
+      REGIST_CODE = #{registCode,jdbcType=VARCHAR},
+      LINE_FLAG = #{lineFlag,jdbcType=VARCHAR},
+      WEBSITE = #{website,jdbcType=VARCHAR},
+      FAX = #{fax,jdbcType=VARCHAR},
+      POSTCODE = #{postcode,jdbcType=VARCHAR},
+      OVERSEARS_CARD = #{oversearsCard,jdbcType=CHAR},
+      SYS_ID = #{sysId,jdbcType=VARCHAR},
+      OUT_MERC_ID = #{outMercId,jdbcType=VARCHAR},
+      CHNMER_SUBJECT_ID = #{chnmerSubjectId,jdbcType=VARCHAR},
+      MAINTAIN_ID = #{maintainId,jdbcType=VARCHAR},
+      CHNMERC_MAINTAIN_ID = #{chnmercMaintainId,jdbcType=VARCHAR},
+      REFUND_FLAG = #{refundFlag,jdbcType=VARCHAR},
+      MERC_SER_TYPE = #{mercSerType,jdbcType=VARCHAR},
+      STORE_MANA_ID_TYPE = #{storeManaIdType,jdbcType=VARCHAR},
+      STORE_MANA_ID_NO = #{storeManaIdNo,jdbcType=VARCHAR}
+    where MERC_ID = #{mercId,jdbcType=VARCHAR}
+  </update>
+</mapper>
