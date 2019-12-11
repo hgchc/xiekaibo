@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.rebirth.mapper.TMercBaseInfoMapper" >
+
   <resultMap id="BaseResultMap" type="com.rebirth.pojo.TMercBaseInfo" >
     <id column="MERC_ID" property="mercId" jdbcType="VARCHAR" />
     <result column="USER_NO" property="userNo" jdbcType="VARCHAR" />
@@ -79,6 +80,7 @@
     <result column="STORE_MANA_ID_TYPE" property="storeManaIdType" jdbcType="VARCHAR" />
     <result column="STORE_MANA_ID_NO" property="storeManaIdNo" jdbcType="VARCHAR" />
   </resultMap>
+
   <sql id="Base_Column_List" >
     MERC_ID, USER_NO, MERC_CHA_NAME, MERC_CHA_NAME_SHORT, MERC_ENG_NAME, MERC_FORM, MERC_NATURE, 
     MERC_MCC, MERC_BUS_RANGE, MERC_PROV, MERC_CITY, MERC_DISTRICT, MERC_REG_ADDR, MERC_BUS_ADDR, 
@@ -95,16 +97,19 @@
     MAINTAIN_ID, CHNMERC_MAINTAIN_ID, REFUND_FLAG, MERC_SER_TYPE, STORE_MANA_ID_TYPE, 
     STORE_MANA_ID_NO
   </sql>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from t_merc_base_info
     where MERC_ID = #{mercId,jdbcType=VARCHAR}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from t_merc_base_info
     where MERC_ID = #{mercId,jdbcType=VARCHAR}
   </delete>
+
   <insert id="insert" parameterType="com.rebirth.pojo.TMercBaseInfo" >
     insert into t_merc_base_info (MERC_ID, USER_NO, MERC_CHA_NAME, 
       MERC_CHA_NAME_SHORT, MERC_ENG_NAME, MERC_FORM, 
@@ -161,6 +166,7 @@
       #{mercSerType,jdbcType=VARCHAR}, #{storeManaIdType,jdbcType=VARCHAR}, #{storeManaIdNo,jdbcType=VARCHAR}
       )
   </insert>
+
   <insert id="insertSelective" parameterType="com.rebirth.pojo.TMercBaseInfo" >
     insert into t_merc_base_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -624,6 +630,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.rebirth.pojo.TMercBaseInfo" >
     update t_merc_base_info
     <set >
@@ -855,6 +862,7 @@
     </set>
     where MERC_ID = #{mercId,jdbcType=VARCHAR}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.rebirth.pojo.TMercBaseInfo" >
     update t_merc_base_info
     set USER_NO = #{userNo,jdbcType=VARCHAR},
